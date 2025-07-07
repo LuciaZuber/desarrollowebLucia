@@ -90,3 +90,54 @@ body {
     width: 100%;
   }
 }
+
+
+// Variables (ya las tenés, por si querés modificar colores o tiempos)
+$color-boton: #eec9d2;
+$color-boton-hover: #cc9cad;
+$transition-time: 0.3s;
+
+// Botón con animación suave al hover
+.btn-suave {
+  background-color: $color-boton;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color $transition-time ease, transform $transition-time ease;
+  
+  &:hover {
+    background-color: $color-boton-hover;
+    transform: scale(1.05);
+  }
+}
+
+// Animación fade-in para textos o elementos que querés que aparezcan suave
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.texto-fadein {
+  animation: fadeIn 1s ease forwards;
+}
+
+// Card con sombra y elevación al pasar el mouse
+.card-suave {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: box-shadow $transition-time ease, transform $transition-time ease;
+  padding: 1rem;
+  margin: 1rem 0;
+
+  &:hover {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+  }
+}
