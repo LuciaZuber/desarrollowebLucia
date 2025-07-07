@@ -1,0 +1,92 @@
+// ===============================
+// VARIABLES
+// ===============================
+$color-principal: #eec9d2;
+$color-secundario: #ffffff;
+$color-texto: #333;
+$color-boton-hover: #cc9cad;
+$fuente-principal: 'Open Sans', sans-serif;
+
+// ===============================
+// MIXIN RESPONSIVE
+// ===============================
+@mixin responsive($ancho) {
+  @if $ancho == mobile {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+  @else if $ancho == tablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
+// ===============================
+// ESTILOS GENERALES
+// ===============================
+body {
+  font-family: $fuente-principal;
+  background-color: $color-secundario;
+  color: $color-texto;
+  margin: 0;
+  padding: 0;
+}
+
+// ===============================
+// NAVBAR
+// ===============================
+.navbar {
+  background-color: $color-secundario;
+  .nav-link {
+    color: $color-texto;
+    font-weight: 500;
+
+    &.active {
+      color: $color-principal;
+    }
+
+    &:hover {
+      color: $color-boton-hover;
+    }
+  }
+}
+
+// ===============================
+// BOTONES PERSONALIZADOS
+// ===============================
+.btn-agregar {
+  background-color: $color-principal;
+  color: $color-secundario;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $color-boton-hover;
+  }
+}
+
+// ===============================
+// PRODUCTOS
+// ===============================
+.titulo-producto {
+  font-weight: 700;
+  color: $color-texto;
+  margin-bottom: 0.5rem;
+}
+
+// ===============================
+// RESPONSIVE EXAMPLE
+// ===============================
+@include responsive(mobile) {
+  .navbar {
+    text-align: center;
+  }
+
+  .btn-agregar {
+    width: 100%;
+  }
+}
