@@ -1,0 +1,15 @@
+// Extensión para títulos principales
+%titulo-principal {
+  font-family: $fuente-titulo;
+  font-weight: 700;
+  color: $color-principal;
+}
+
+// Extensión para botones primarios
+%boton-base {
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  border-radius: $radius-medio;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

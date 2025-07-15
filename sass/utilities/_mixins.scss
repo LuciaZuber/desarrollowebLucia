@@ -1,0 +1,27 @@
+// Media query reutilizable
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 768px) { @content; }
+  }
+}
+
+// Mixin para botones redondeados
+@mixin boton-estilizado($color-fondo, $color-texto) {
+  background-color: $color-fondo;
+  color: $color-texto;
+  border: none;
+  padding: 10px 18px;
+  border-radius: $radius-medio;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.4s ease, color 0.3s ease;
+}
+
+// Mixin para sombreado
+@mixin sombra-suave {
+  box-shadow: $box-shadow-suave;
+}
+
+@mixin sombra-hover {
+  box-shadow: $box-shadow-hover;
+}

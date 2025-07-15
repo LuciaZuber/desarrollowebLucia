@@ -1,4 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+// 2. Importar parciales
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'utilities/extends';
+
+// 3. Reset y estilos base
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -6,22 +13,24 @@
 }
 
 @font-face {
-  font-family: "TituloLocal";
-  src: url("fuentes/TituloLocal.ttf") format("truetype");
+  font-family: 'TituloLocal';
+  src: url('fuentes/TituloLocal.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
+// 5. Estilos generales
 body {
-  font-family: "Open Sans", sans-serif;
-  background-color: #f9f4f1;
-  color: #3a2c2c;
+  font-family: $fuente-principal;
+  background-color: $color-fondo-claro;
+  color: $color-texto;
   padding: 0 20px;
   line-height: 1.5;
 }
 
 header {
-  background: linear-gradient(90deg, #7a4e4e, #b67979);
-  color: #fff;
+  background: linear-gradient(90deg, $color-principal, $color-secundario);
+  color: $color-blanco;
   padding: 20px 30px;
   display: flex;
   justify-content: space-between;
@@ -30,7 +39,7 @@ header {
 }
 
 header h1 {
-  font-family: "TituloLocal", serif;
+  font-family: $fuente-titulo;
   font-weight: 700;
   font-size: 2.8rem;
   letter-spacing: 2px;
@@ -43,7 +52,7 @@ nav ul {
 }
 
 nav ul li a {
-  color: #996262;
+  color: lighten($color-principal, 10%);
   text-decoration: none;
   font-weight: 600;
   padding: 8px 15px;
@@ -54,8 +63,8 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a:focus {
-  background-color: #b67979;
-  color: #fff;
+  background-color: $color-secundario;
+  color: $color-blanco;
   outline: none;
 }
 
@@ -66,28 +75,27 @@ main {
 }
 
 main section {
-  background-color: white;
+  background-color: lighten($color-fondo-claro, 5%);
   border-radius: 12px;
   padding: 35px 25px;
   margin-bottom: 50px;
-  box-shadow: 0 4px 12px rgba(122, 78, 78, 0.3);
+  box-shadow: 0 4px 12px rgba($color-principal, 0.3);
 }
 
 main h2 {
-  font-family: "TituloLocal", serif;
+  font-family: $fuente-titulo;
   font-weight: 700;
   font-size: 2rem;
-  color: #7a4e4e;
+  color: $color-principal;
   margin-bottom: 20px;
-  border-bottom: 2px solid #b67979;
+  border-bottom: 2px solid $color-secundario;
   padding-bottom: 5px;
-  max-width: -moz-fit-content;
   max-width: fit-content;
 }
 
 footer {
-  background-color: #7a4e4e;
-  color: #fff;
+  background-color: $color-principal;
+  color: $color-blanco;
   text-align: center;
   padding: 20px 15px;
   font-size: 0.9rem;
@@ -100,15 +108,23 @@ footer {
     align-items: flex-start;
     gap: 15px;
   }
+  
   nav ul {
     flex-wrap: wrap;
     gap: 15px;
   }
+  
   main {
     margin: 30px 10px;
     padding: 0 10px;
   }
+  
   main section {
     padding: 25px 15px;
   }
-}/*# sourceMappingURL=estilos.css.map */
+}
+
+
+@import 'utilities/variables';
+@import 'utilities/mixins';
+@import 'utilities/extends';

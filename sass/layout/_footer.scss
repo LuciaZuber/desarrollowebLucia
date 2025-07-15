@@ -1,0 +1,70 @@
+footer {
+  background-color: #7a4e4e;
+  color: #f1e9e9;
+  padding: 20px;
+  text-align: left;
+  font-size: 0.9rem;
+  box-shadow: none;
+  border: none;
+}
+
+.redes-sociales img {
+  width: 28px;
+  margin: 0 8px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.redes-sociales img:hover,
+.redes-sociales img:focus {
+  transform: scale(1.1);
+  outline: none;
+}
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.redes-sociales {
+  display: flex;
+  gap: 12px;
+}
+footer {
+  background-color: #f5e3e3;
+  color: #7a4e4e;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 0.9rem;
+  border-top: 1px solid #e1bcbc;
+}
+
+footer .redes,
+.footer .redes {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer .redes a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+footer .redes img {
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+footer .redes img:hover {
+  transform: scale(1.1);
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+}
